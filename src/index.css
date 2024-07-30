@@ -4,196 +4,168 @@
 
 
 
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-    filter: brightness(1.3)
-    
-}
-
-:root {
-    --font-primary: 'Poppins', sans-serif;
-    --color-white: #ffffff;
-    --color-black: #000000;
-    --font-weight: 500;
-}
-
-/* Main div from App.jsx */
-.main__container {
+.App {
     display: flex;
-   
+    width: 100%;
+    height: 100vh;
+    gap: 5%;
 }
 
-
-/* Hero Imgage */
-.hero__img__wrapper {
-    font-family: var(--font-primary);
-    margin-right: 15%;
-    
+.App__img {
+    width: 35%;
 }
-    .hero__img__h1 {
-        position: absolute;
-        color: var(--color-white);
-        top: 9%;
-        left: 10%;
-        font-size: 2rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-   
- .hero__img__wrapper img {
-    width: 540px;
-    height: auto;
-   
- }
 
- .hero__img__h2 {
+ h1 {
+   color: white; 
+   
+} 
+
+
+.logo__wrapper {
     position: absolute;
-    bottom:-60px;
-    color: var(--color-white);
-    font-size: 2.2rem;
-    text-align: center;
-    left: 9%;
-   line-height: 1.5;
- }
-
-
-/* Login Page */
-
-.login__main {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    z-index: 2;
+    gap: 10px;
+    margin: 3%;
+}
+
+ .App__img  .logo {
+    width: 30px;
+    height: 50px;
+    z-index: 1;
    
+} 
+
+.App__img img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: -1;
+}
+
+h2 {
+    position: absolute;
+    left: 8%;
+    bottom: 14%;
+    color: white;
+    font-size: 2.4rem;
+    font-weight: 700;
+        line-height: 1.4;
+        letter-spacing: -1px;
+        
+        
+}
+
+.App__logPage {
+    width: 65%;
+    align-items: center;
+    
+}
+
+.App__logWrapper {
+ width: 40%;
+margin: 15% 0 0 25%;
+height: auto;
 
 }
 
 
-.login__h1 {
-    font-family: var(--font-primary);
+.App__heading {
     font-weight: 600;
-    margin-top: 100px;
-    font-size: 2.5rem;
+    font-size: 2rem;
+    margin: 4%;
+    display: flex;
+    justify-content: center;
+    
+} 
+
+.App__logWrapper  form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: auto;
+    
+}
+
+.App__logWrapper  form input {
+ padding: 3%;
+ border-radius: 3px;
+   width: 100%;
+}
+
+.email {
     margin-bottom: 10px;
-
+}
+.App__logWrapper  form input::placeholder {
+    color: rgb(21, 21, 115)
 }
 
-/* Email input box */
-.email__input {
+
+.App__logWrapper  form label {
     display: flex;
-    flex-direction: column;
-   margin: 5px;
+    justify-content: space-between;
+ 
 }
 
-.email__input label,.label__password  {
-    font-family: var(--font-primary);
-    font-weight: var(--font-weight);
-    margin-left: 5px;
-}
-.email__input input, .password__input input {
-    width: 400px;
-    padding: 8px 26px;
-    border: 1px solid var(--color-black);
-    margin: 5px;
-    font-size: 15px;
-    border-radius: 5px;
+.forget__password {
+    color: rgb(45, 45, 208);
 }
 
-.email__input input::placeholder, .password__input input::placeholder {
-    color: #091949;
-}
-
-/*  Password Input Area */
-.password__input {
-    display: flex;
-    flex-direction: column;
-    margin: 5px;
+.password__wrapper {
     position: relative;
 }
 
-.password__input img {
-    width: 20px;
-    height: 15px;
-    position: absolute;
-    bottom: 16px;
-    right: 50px;
- 
-    
+ .eye__logo {
+   position: absolute;
+    width: 30px;
+    height: 18px;
+    top: 45%;
+    left: 85%;
+  
 }
 
-.password__input label {
-    display: flex;
-    justify-content: space-between;
-    letter-spacing: -1.2%;
-    line-height: 14px;
-    margin: 5px;
+.btn {
+    color: white;
+    background-color: blue; 
+    border: none;
+    font-size: 16px;
+    padding: 3%;
+    border-radius: 3px;
+   margin: 4% 0 5% 0;
 }
 
-.forget__Password {
-    color: #163EB6;
-    line-height: 16px;
-    font-family: var(--font-primary);
-    font-size: 12px;
-    font-weight: var(--font-weight);
-    margin-right: 12px;
+.hr {
+  margin-bottom: 5%;  
 }
-
-/*  Login Button */
-  .login__btn {
-    width: 400px;
-    padding: 8px 26px;
-    border: 1px solid var(--color-black);
-    margin: 15px;
-    font-size: 15px;
-    border-radius: 5px;
-    color: var(--color-white);
-    background-color: #163EB6;
-  }  
-
-
-  /*  Horizontal Rule */
-  .login__hr {
-    margin: 15px;
-  }
-
-  /* Google G image logo */
-  .Google__G-wrapper {
-    width: 400px;
-    padding: 8px 26px;
-    border: 1px solid var(--color-black);
-    margin: 1rem;
-    font-size: 15px;
-    border-radius: 5px;
+.googleImg__wrapper {
     display: flex;
     justify-content: center;
-    gap: 14px;
-    font-family: var(--font-primary);
     align-items: center;
-    font-weight: var(--font-weight);
-  }
+    gap: 3%;
+   border: 1px solid black;
+   padding: 8px;
+   border-radius: 4px;
+}
+ 
 
-  .google__G {
-    width: 20px;
-    
+.googleImg__wrapper  img {
+    width: 7%;
+   
 }
 
-/* Login Enquiries */
- .login__enquiry {
-    display: block;
+.account__enquiry {
     text-align: center;
-    letter-spacing: -1.5%;
- }
+    margin: 3%;
+}
 
 .signup {
-    color: rgba(22, 62, 182, 1);
-    font-family: var(--font-primary);
-    align-items: center;
-    font-weight: var(--font-weight);
+    color:rgb(40, 40, 227);
 }
